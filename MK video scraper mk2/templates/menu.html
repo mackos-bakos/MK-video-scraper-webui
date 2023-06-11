@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MK video scraper</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			padding: 50px;
+			background-color: #1a1919;
+			color: #FFF;
+		}
+		.feature-block {
+			background-color: #242323;
+			padding: 20px;
+			margin-bottom: 30px;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+		}
+		.form-group {
+			margin-bottom: 15px;
+		}
+		.form-group label {
+			display: block;
+			margin-bottom: 5px;
+		}
+		.form-group input[type="text"], .form-group input[type="password"] {
+			color: black;
+			width: 100%;
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid #ddd;
+		}
+		.form-check {
+			display: block;
+			margin-bottom: 10px;
+		}
+		.form-check input {
+			margin-right: 5px;
+		}
+		.form-check label {
+			color: #FFF;
+		}
+		.btn-custom {
+			background-color: red;
+			color: white;
+			border: none;
+			padding: 10px 15px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		.btn-custom:hover {
+			background-color: darkred;
+		}
+	</style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h2 class="text-center mt-4 mb-4">MK video scraper Web Interface</h2>
+
+                <div class="feature-block">
+                    <h3>scrape an m3u8 video</h3>
+                    <form action="/scrape" method="post">
+                        <div class="form-group">
+                            <label for="purge">video link in m3u8 format</label>
+                            <input type="text" class="form-control" id="Link" name="Link" placeholder="Enter m3u8 link">
+                        </div>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="Resume" name="Resume">
+							<label class="form-check-label" for="Resume">resume this video with any segments currently in the segment register?</label>
+						</div>
+                        <button type="submit" class="btn btn-custom">scrape video</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
