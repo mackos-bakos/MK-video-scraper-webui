@@ -77,7 +77,7 @@ def compile_mp4(segs,output_dir,output_path):
             
         else: 
             segment_register = []
-            for i, segment_url in enumerate(segment_urls):
+            for i, segment_url in enumerate(segs):
                 segment_file = output_dir + f"{i:04d}.ts"
                 segment_register.append(segment_file)
             command = ['ffmpeg', '-i', 'concat:' + '|'.join(segment_register), '-c', 'copy', output_path]
